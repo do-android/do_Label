@@ -1,0 +1,10 @@
+*.class
+*.apk
+bin/
+gen/
+.settings/
+proguard/
+*.classpath
+/doExt_do_Label/do_Label.zip
+/doExt_do_Label/do_build.xml
+/doExt_do_Label/libs/docore.jar
