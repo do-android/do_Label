@@ -29,5 +29,6 @@ public abstract class do_Label_MAbstract extends DoUIModule{
 		this.registProperty(new DoProperty("textAlign", PropertyDataType.String, "left", true));
 		this.registProperty(new DoProperty("linesSpace", PropertyDataType.Number, "", false));
 		this.registProperty(new DoProperty("shadow", PropertyDataType.Number, "", false));
+		this.registProperty(new DoProperty("padding", PropertyDataType.String, "left", true));
 	}
 }

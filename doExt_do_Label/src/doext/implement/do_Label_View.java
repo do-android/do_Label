@@ -1,6 +1,7 @@
 package doext.implement;
 
 import java.util.Map;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
@@ -13,7 +14,9 @@ import android.view.View;
 import android.widget.TextView;
 import core.helper.DoTextHelper;
 import core.helper.DoUIModuleHelper;
+
 import org.json.JSONObject;
+
 import core.interfaces.DoIScriptEngine;
 import core.interfaces.DoIUIModuleView;
 import core.object.DoInvokeResult;
@@ -144,6 +147,15 @@ public class do_Label_View extends TextView implements DoIUIModuleView, do_Label
 				}
 				this.setShadowLayer(_radius, _x, _y, DoUIModuleHelper.getColorFromString(_data[0], Color.BLACK));
 			}
+		}
+		if (_changedValues.containsKey("padding")) {
+			String _padding = _changedValues.get("padding");
+			String[] _paddings = _padding.split(",");
+			int paddingLeft = (int) (DoTextHelper.strToInt(_paddings[1], 0) * model.getXZoom());
+			int paddingTop = (int) (DoTextHelper.strToInt(_paddings[0], 0) * model.getYZoom());
+			int paddingRight = (int) (DoTextHelper.strToInt(_paddings[3], 0) * model.getXZoom());
+			int paddingBottom = (int) (DoTextHelper.strToInt(_paddings[2], 0) * model.getYZoom());
+			this.setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
 		}
 	}
 
