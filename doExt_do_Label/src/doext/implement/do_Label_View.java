@@ -151,9 +151,9 @@ public class do_Label_View extends TextView implements DoIUIModuleView, do_Label
 		if (_changedValues.containsKey("padding")) {
 			String _padding = _changedValues.get("padding");
 			String[] _paddings = _padding.split(",");
-			int paddingLeft = (int) (DoTextHelper.strToInt(_paddings[3], 0) * model.getXZoom());
+			int paddingLeft = (int) (DoTextHelper.strToInt(_paddings[1], 0) * model.getXZoom());
 			int paddingTop = (int) (DoTextHelper.strToInt(_paddings[0], 0) * model.getYZoom());
-			int paddingRight = (int) (DoTextHelper.strToInt(_paddings[1], 0) * model.getXZoom());
+			int paddingRight = (int) (DoTextHelper.strToInt(_paddings[3], 0) * model.getXZoom());
 			int paddingBottom = (int) (DoTextHelper.strToInt(_paddings[2], 0) * model.getYZoom());
 			this.setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
 		}
